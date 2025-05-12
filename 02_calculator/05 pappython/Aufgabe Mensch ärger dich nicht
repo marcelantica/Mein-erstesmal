@@ -1,21 +1,24 @@
 import random
 
-def wuerfeln():
-    versuche = 0
-    max_versuche = 3
-    
-    while versuche < max_versuche:
-        # Wurf einer zufälligen Zahl zwischen 1 und 6
-        zahl = random.randint(1, 6)
-        versuche += 1
-        
-        print(f"Wurf {versuche}: {zahl}")
-        
-        if zahl == 6:
-            print("Die Figur ist raus! (6 geworfen)")
-            return  # Wenn eine 6 geworfen wird, ist die Funktion sofort zu Ende.
-    
-    print("Maximale Versuche erreicht. Keine 6 geworfen.")
+versuch = 0
+maxwurf = 3
 
-# Funktion aufrufen
-wuerfeln()
+def Wuerfeln():
+    global versuch   # Keine ahnung is halt so
+
+    while versuch < maxwurf:
+        zahl = random.randint(1, 6)
+        versuch += 1
+
+        print(f"Wurf {versuch}: {zahl}") # ist für Python wichtig das die zahlenwerte übernommen werden 
+
+        if zahl == 6:
+            print("Figur nach draußen setzen!")
+            break
+        else:
+            print("Keine Sechs, nächster Versuch.")
+
+    if versuch == maxwurf and zahl != 6:
+        print("Keine Sechs geworfen. Nächster Spieler ist dran.")
+
+Wuerfeln()
