@@ -1,0 +1,8 @@
+
+breite = float ("Breite des Raumes")
+laenge = float ("Länge des Raumes")
+hoehe  = float ("Höhe des Raumes")
+t_innen = float ("Innentemp.")
+t_aussen = float ("Aussentemp.")
+
+volumen
