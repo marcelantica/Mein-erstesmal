@@ -10,11 +10,11 @@ def eingabe_der_werte():
     return volumen, dt # gibt 2 werte zurück
 
 def berechne_heizleistung(l_volumen,l_dt):
-    ergebnis = l_volumen*l_dt*0,024
+    ergebnis = l_volumen*l_dt*0.024
     return ergebnis
 
 
-volumen, dt = eingabe_der_werte():
+volumen, dt = eingabe_der_werte()
 if dt < 0:
     print (f"Achtung Temp.differenz zu klein {dt} < 0")
   
